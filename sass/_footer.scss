@@ -1,0 +1,103 @@
+.footer {
+    background-color: $color-black;
+    padding: 7rem 0;
+    font-size: 1.4rem;
+    color: $white_color;
+
+    @include respond(tab-port) {
+        padding: 5rem;
+    }
+
+    &__logo-box {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }
+
+    &__navigation {
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $white_color;
+            text-decoration: none;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-secondary-light;
+        }
+    }
+
+    &__link-2 {
+        &:link,
+        &:visited {
+            color: $color-primary;
+            text-decoration: none;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-secondary-light;
+        }
+    }
+
+    &__copyright {
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
+
+        @include respond(tab-port) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.font-copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.3rem;
+    font-family: 'Chivo', sans-serif;
+    text-decoration: none;
+
+    &:link,
+        &:visited {
+            color: $btn-purple;
+            text-decoration: none;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: all .2s;
+        }
+}

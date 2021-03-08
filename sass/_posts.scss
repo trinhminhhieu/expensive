@@ -1,0 +1,94 @@
+.sectionpost {
+  width: 100%;
+  height: 75rem;
+  padding: 1rem;
+  padding-top: 15rem;
+  background-color: #ccc;
+
+  @include respond(phone) {
+    padding-top: 7rem;
+    height: 100rem;
+  }
+}
+
+.heslpost {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.textpost {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.boximg {
+  padding: 0;
+}
+
+.srcimg {
+  height: 8rem;
+
+}
+
+.boximg img,
+.imgthumbnail img {
+  width: 100%;
+}
+
+.imgthumbnail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+// .slides {
+//   width: 700px;
+//   margin: 0 auto;
+// }
+
+// .slides ul {
+//   list-style: inside none disc;
+//   margin: 0;
+//   padding: 0;
+// }
+.maingalleryimg {
+  height: 30rem;
+}
+
+.imgthumbnail img {
+  cursor: pointer;
+}
+
+:root {
+  /* Set fade in duration */
+  --fade-time: 0.2s ease;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+.titleplace {
+  font-size: 2rem;
+  color: orange;
+}
+
+.section-map {
+  position: relative;
+  height: 65rem;
+  margin-top: calc(0px - var(--section-rotate));
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}

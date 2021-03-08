@@ -1,0 +1,50 @@
+extends base
+//- include _reviewCard
+
+block append head
+  link(rel='stylesheet', href='/js/pgwslideshow.min.css')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet')
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js')
+  
+
+
+block content
+    .post-single
+        section.sectionpost
+            .row
+                .col-1-of-2
+                    .slides
+                        ul.pgwSlideshow
+                            li
+                                img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.startLocation.description}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription1}`, alt=`${tour.startLocation.description}`, data-description=`${tour.startLocation.datadescription1}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription2}`, alt=`${tour.startLocation.description}`, data-description=`${tour.startLocation.datadescription2}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription3}`, alt=`${tour.startLocation.description}`, data-description=`${tour.startLocation.datadescription3}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription4}`,alt=`${tour.startLocation.description}`, data-description=`${tour.startLocation.datadescription4}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription5}`, alt='',data-description=`${tour.startLocation.datadescription5}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription6}`, alt='', data-description=`${tour.startLocation.datadescription6}`)
+                            li
+                                img(src=`/img/vietnam/${tour.startLocation.imgdescription7}`, alt='',  data-description=`${tour.startLocation.datadescription7}`)
+                            li
+                                img(src=`/img/vietnam/${tour.imageCover}`, alt='')
+                            li
+                                img(src=`/img/vietnam/${tour.imageCover}`, alt='')
+                           
+                        //-     </div>
+                .col-1-of-2
+                    .boxtext
+                        h1.titleplace= tour.startLocation.description
+                        p.textpost= tour.description
+        section.section-map
+            #map(data-locations=`${JSON.stringify(tour.locations)}`)
+
+
+        script(src='/js/jquery.min.js')
+        script(src='/js/pgwslideshow.min.js')
+        script(src='/js/mainjquerygallery.js')

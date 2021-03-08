@@ -1,0 +1,34 @@
+.section-placelist {
+    background-color: #ffffff;
+    padding: 4rem;
+    height: 45rem;
+    padding-top: 11rem;
+
+    @include respond(phone) {
+        height: auto;
+    }
+
+}
+
+.listplacecountry {
+    padding: 1rem;
+    display: table;
+}
+
+.linkplace {
+    list-style: none;
+    color: orangered;
+    font-size: 1.5rem;
+    padding: 1rem;
+    float: left;
+    transition: all 1s ease;
+
+    @include respond(tab-portal) {
+        letter-spacing: 0;
+        padding: 1rem;
+    }
+
+    &:hover {
+        color: #f3d113
+    }
+}

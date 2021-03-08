@@ -1,0 +1,160 @@
+.register {
+    background-color: #f7f7f7;
+    padding: 8rem 6rem;
+    height: 99rem;
+    position: relative;
+  }
+
+  .register-form {
+     margin: 0 auto;
+    max-width: 56rem;
+    height: 86rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+    padding: 5rem 7rem;
+    border-radius: 5px;
+
+    @include respond(phone) {
+      background-color: #fff;
+      height: 75rem;
+    }
+  }
+
+  .heading-secondary-register {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#e05c5e),
+      to(#f7161a)
+    );
+    background-image: linear-gradient(to right, #e05c5e, #f7161a);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .form__inputo {
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: inherit;
+    padding: 1.25rem 1.75rem;
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    background-color: #f2f2f2;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  
+  }
+  .form__inputo:focus {
+    outline: none;
+    border-bottom: 3px solid #1eac1e;
+  }
+  .form__inputo:focus:invalid {
+    border-bottom: 3px solid #ff3030;
+  }
+  .form__inputo::-webkit-input-placeholder {
+    color: #bbb;
+  }
+  .form__group:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+  .form__label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+
+.textlabelz {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 1rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+}
+.textlabelz-2 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 1rem;
+    color: #fff;
+
+   @include respond(phone) {
+     font-size: 2rem;
+   }
+}
+
+.labelimg {
+    float: left;
+}
+
+.btn-social {
+    width: 100%;
+    height: 4.5rem;
+}
+
+hr {
+    width: 100%;
+    margin: -12px auto 10px;
+}
+
+.textdeconrate--text  {
+    background-color: #fff;
+    width: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+.ortext {
+    text-align: center;
+}
+
+.textaldeary {
+    color: #777;
+    font-size: 1.5rem;
+}
+
+.agreecheck {
+    font-size: 0.964706em;
+    cursor: pointer;
+}
+.checkagree  {
+    float: left;
+    width: 10%;
+}
+.fontinput-checkbox  {
+    font-size: 1.5rem;
+}
+.fontinput-checkbox input[type="checkbox"]{
+    width: 1.15384615em;
+    height: 3.15384615em;
+    vertical-align: top;
+}
+ .textpolicy {
+    float: left;
+    width: 90%;
+    background-color: #ccc;
+}
+.textsummarypolicy {
+    font-size: 1.5rem;
+    float: right;
+    padding-left: 1rem;
+}
+.policy {
+    width: 100%;
+    height: 5rem;
+}

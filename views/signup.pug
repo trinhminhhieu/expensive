@@ -1,0 +1,54 @@
+extends base
+
+block content
+  
+          main.register
+            .register-form
+              h2.heading-secondary-register Onemytrip create account
+              p#messnotice.message
+              form.form
+                .form__group
+                  label.form__label(for='email') Name *
+                  input#name.form__inputo(type='text', placeholder='youname', required='required')
+                .form__group
+                  label.form__label(for='email') Email address *
+                  input#email.form__inputo(type='email', placeholder='you@example.com', required='required')
+                .form__group.ma-bt-md
+                  label.form__label(for='password') Password *
+                  input#password.form__inputo(type='current-password', placeholder='••••••••', required='required', minlength='8')
+                .form__group.ma-bt-md
+                  label.form__label(for='password') Password confirm *
+                  input#passwordconfirm.form__inputo(type='current-password', placeholder='••••••••', required='required', minlength='8')
+                .form__group
+                  .policy
+                    .checkagree
+                      label.fontinput-checkbox(for='#')
+                        input.agreecheck(type='checkbox')
+                        span.checkmark
+                    .textpolicy
+                      p.textsummarypolicy
+                        | Join 
+                        a(href='#') OneMyTrip
+                        | . opens in a new window By
+                        |                                 joining I accept all 
+                        a(href='/policy') terms and conditions.
+                .form__group
+                  p.textaldeary Already have an account?
+                  a.textforgotpass(href='/login') Login
+                .form__group
+                  .ortext
+                    .textdeconrate--text
+                      p.or OR Register with
+                    hr
+                .form__group
+                  .btn-social
+                    button.btn-label-1
+                      span
+                        img.labelimg(src='https://a.travel-assets.com/gss-loader/user/gss-content/images/google-logo.svg', alt='google-logo')
+                        fonts.textlabelz Register with Google
+                    button.btn-label-2
+                      span
+                        img.labelimg(src='https://a.travel-assets.com/dms-svg/social/logos-facebook-invert.svg', alt='google-logo')
+                        fonts.textlabelz-2 Register with Facebook
+                .form__group
+                  button.btno.btn--green Signup

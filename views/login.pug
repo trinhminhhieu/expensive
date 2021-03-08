@@ -1,0 +1,42 @@
+extends base 
+ 
+block content
+
+            main.login
+              .login-form
+                h2.heading-secondary-login Login account
+                p#messnotice.message
+                form.form
+                  .form__group
+                    label.form__label(for='email') Email address *
+                    input#email.form__inputo(type='email', placeholder='you@example.com', required='required')
+                  .form__group.ma-bt-md
+                    label.form__label(for='password') Password *
+                    input#password.form__inputo(type='current-password', placeholder='••••••••', required='required', minlength='8')
+                  .form__group
+                    .cot.loginoption
+                      label.containerz
+                        input.checkbox(type='checkbox')
+                        span.labelcheck  Keep me signed in
+                    .cot.loginoption
+                      a.textforgotpass.right(href='/forgotpassword') Forgot password?
+                  .form__group
+                    p.textaldeary Need an account?
+                    a.textforgotpass(href='/signup') Register
+                  .form__group
+                    .ortext
+                      .textdeconrate--text
+                        p.or OR Login with
+                      hr
+                  .form__group
+                    .btn-social
+                      button.btn-label-1
+                        span
+                          img.labelimg(src='https://a.travel-assets.com/gss-loader/user/gss-content/images/google-logo.svg', alt='google-logo')
+                          fonts.textlabels Login with Google
+                      button.btn-label-2
+                        span
+                          img.labelimg(src='https://a.travel-assets.com/dms-svg/social/logos-facebook-invert.svg', alt='google-logo')
+                          fonts.textlabels-2 Login with Facebook
+                  .form__group
+                    button.btno.btn--green Login

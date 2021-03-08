@@ -1,0 +1,124 @@
+
+
+.header {
+        height: 7rem;
+        width: 100%;
+        background-color: $btn_bg;
+        padding: 1rem;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1099;
+
+        @include respond(phone) {
+            position: relative;
+        }
+
+        &__rowmenu{
+           padding: 0.5rem;
+           height: 5rem;
+           display: inline-block;
+        }
+        
+        &__navbar {
+            padding: 0;
+            float: left;
+            margin-left: 7rem;
+            display: flex;
+            
+          
+        }
+
+        &__navbar-2 {
+            padding: 0;
+            float: right;
+            margin-right: -49rem;
+            display: flex;
+          
+        }
+
+        &__logo {
+            height: 5rem;
+            width: 100%;
+            padding: 1rem;
+        }
+        &__ula {
+            height: 5rem;
+            width: 100%;
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &__nav-item {
+                    float: left;
+                    padding: 1.5rem;
+                    list-style: none;
+           }
+
+        &__nav-link {
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    color: $white_color;
+                    text-decoration: none;
+                  
+
+                    &:hover {
+                        color: $btn_color;
+                        transition: all .2s;
+                    }
+         }
+
+         &__nav-login {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            color: #181717;
+            text-decoration: none;
+          
+
+            &:hover {
+                color: #fff;
+                transition: all .2s;
+            }
+ }
+
+            &__nav-register {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                color: #fff;
+                text-decoration: none;
+            
+
+                // &:hover {
+                //     color: #0f0f0f;
+                //     transition: all .2s;
+                // }
+            }
+       
+   &__logo-1 {
+
+    @include respond(phone) {
+        margin-left: -6rem;
+        margin-top: -1rem;
+    
+         }
+   }
+   
+}
+
+.register-button {
+                text-decoration: none;
+                background-color: cornflowerblue;
+                padding: 1rem;
+                border-radius: 6px;
+                position: relative;
+                text-align: center;
+                transition: all .1s ease;
+                margin-left: 22px;
+                top: 0.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(236, 236, 220);
+                }
+}

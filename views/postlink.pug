@@ -1,0 +1,72 @@
+extends base
+
+block append head
+  link(rel='stylesheet', href='/js/pgwslideshow.min.css')
+
+
+block content
+
+        section.sectionpost
+            .row
+                .col-1-of-2
+                    .slides
+                        ul.pgwSlideshow
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/san-francisco.jpg', alt='San Francisco, USA', data-description='Golden Gate Bridge')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/rio.jpg', alt='Rio de Janeiro, Brazil')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/london.jpg', alt='London', data-description='Tower Bridge')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/new-york.jpg', alt='dfes')
+                            li
+                                img(src='https://api.time.com/wp-content/uploads/2018/03/digital-nomad-remote-work-travel.jpg?w=800&quality=85', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/paris.jpg', alt='Pari, France', data-description='Eiffel Tower')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/sydney.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/tokyo.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/honk-kong.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/dakar.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/toronto.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/monaco.jpg', alt='')
+                            li
+                                img(src='https://static.pgwjs.com/img/pg/slideshow/honk-kong.jpg', alt='')
+                            li
+                                img(src='https://www.fcmtravel.com/sites/default/files/styles/grid_items/public/why-choose-summary.jpg?itok=LAqXcbBq', alt='')
+                        //- //
+                        //-     <div class="boximg">
+                        //-     <img src="./img/img1.jpg" alt="" id="current" class="maingalleryimg">
+                        //-     </div>
+                        //-     <div class="imgthumbnail">
+                        //-     <img src="./img/img1.jpg" alt="" class="srcimg">
+                        //-     <img src="./img/img2.jpg" alt="" class="srcimg">
+                        //-     <img src="./img/img3.jpg" alt="" class="srcimg">
+                        //-     <img src="./img/img4.jpg" alt="" class="srcimg">
+                        //-     </div>
+                .col-1-of-2
+                    .boxtext
+                        h1.titleplace Ha Long Bay- Quang Ninh
+                        p.textpost
+                            | This vast continent, with more than half the world&rsquo;s population, has ancient temples, striking natural beauty
+                            | and some of the world&rsquo;s largest cities.
+                            | In Asia, visit peaceful countryside, serene temples, glorious beaches and ultra-modern cities. Plan annual
+                            | vacations to individual countries or spend a summer backpacking across the continent.
+                            | China has greater than half of Asia&rsquo;s area and more than 1.3 billion people, many living in the large eastern
+                            | cities of Shanghai, Guangzhou, Shenzhen and Beijing. Enjoy the mix of Chinese culture and modern
+                            | sophistication. See temples and museums from ancient dynasties. Do some luxury shopping next to neighborhood
+                            | wet markets featuring fresh foods of all kinds.
+                            | Explore inland sites, including Xian&rsquo;s ancient terracotta warriors, the Great Wall of China, Guilin&rsquo;s
+                            | limestone mountains, Harbin&rsquo;s ice castles and the wide Yangtze Gorge. Ride horseback on the vast plains of
+                            | Mongolia.
+        section.section-map
+            #map
+
+        script(src='/js/jquery.min.js')
+        script(src='/js/pgwslideshow.min.js')
+        script(src='/js/mainjquerygallery.js')

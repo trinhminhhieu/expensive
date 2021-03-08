@@ -1,0 +1,45 @@
+extends base
+//- include _reviewCard
+
+block append head
+  link(rel='stylesheet', href='/js/pgwslideshow.min.css')
+
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet')
+
+
+block content
+
+        section.sectionpost
+            .row
+                .col-1-of-2
+                    .slides
+                        ul.pgwSlideshow
+                            li
+                                img(src=`/img/tours/${rus.imageCover}`, alt=`${rus.startLocation.description}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription1}`, alt=`${rus.startLocation.description}`, data-description=`${rus.startLocation.datadescription1}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription2}`, alt=`${rus.startLocation.description}`, data-description=`${rus.startLocation.datadescription2}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription3}`, alt=`${rus.startLocation.description}`, data-description=`${rus.startLocation.datadescription3}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription4}`,alt=`${rus.startLocation.description}`, data-description=`${rus.startLocation.datadescription4}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription5}`, alt='',data-description=`${rus.startLocation.datadescription5}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription6}`, alt='', data-description=`${rus.startLocation.datadescription6}`)
+                            li
+                                img(src=`/img/rus/${rus.startLocation.imgdescription7}`, alt='',  data-description=`${rus.startLocation.datadescription7}`)
+                            
+                .col-1-of-2
+                    .boxtext
+                        h1.titleplace= rus.startLocation.description
+                        p.textpost= rus.description
+                            
+        section.section-map
+            #map(data-locations=`${JSON.stringify(rus.locations)}`)
+
+        script(src='/js/jquery.min.js')
+        script(src='/js/pgwslideshow.min.js')
+        script(src='/js/mainjquerygallery.js')

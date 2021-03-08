@@ -1,0 +1,103 @@
+.section-place {
+    padding: 8rem 0;
+    height: 90rem;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(182, 193, 190, 0.8));
+
+    @include respond(phone) {
+        height: auto;
+    }
+
+}
+
+.card-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}
+.columm {
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 21rem;
+    display: flex;
+
+    @include respond(phone) {
+       height: auto;
+       display: block;
+    }
+}
+.place-box {
+    // background-color: orangered;
+    height: 20rem;
+    width: 26rem;
+    position: relative;
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: 3rem;
+
+        @include respond(phone) {
+            margin-right: 0;
+        }
+    }
+
+    @include respond(phone) {
+        width: 100% !important;
+        margin-bottom: 11rem;
+    }
+
+    &__image-box {
+       padding: 0;
+    }
+
+    &__imagebox {
+        background-size: cover;
+        width: 100%;
+        height: 17rem;
+        position: absolute;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.1);
+
+            @include respond(phone) {
+                transform: initial;
+            }
+        }
+        
+
+        
+        @include respond(tab-port) {
+            height: 15rem;
+        }
+        @include respond(phone) {
+            height: 30rem;
+        }
+    }
+
+
+    &__title {
+        font-size: 2rem;
+        top: 1.5rem;
+        position: absolute;
+        width: 100%;
+        color: #fffdfd;
+        text-align: end;
+        font-weight: 200;
+        background-color: rgba(74, 73, 71, 0.5);
+        padding-right: 1rem;
+        z-index: 10;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            width: 60%;
+            text-align: right;
+            margin-left: 14rem;
+            background-color: transparent;
+
+         }
+    }
+ 
+}

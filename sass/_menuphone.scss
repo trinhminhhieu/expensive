@@ -1,0 +1,286 @@
+.navigator {
+
+
+    &__click {
+        display: none;
+    }
+
+    &__button {
+        // background-color: orangered;
+        height: 5rem;
+        width: 6rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 1rem;
+        text-align: center;
+        z-index: 700;
+        display: none;
+        overflow: hidden;
+
+        @include respond(phone) {
+            display: initial;
+            z-index: 2000;
+        }
+
+
+    }
+
+
+    &__background {
+        height: 0;
+        // width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        background-image: #fff;
+
+        z-index: 400;
+
+    }
+
+
+    &__navul {
+        position: fixed;
+        height: 50vh;
+        top: 10rem;
+        right: 0;
+        z-index: 500;
+        transition: all .7;
+        opacity: 0;
+        width: 0;
+
+    }
+
+    &__listitem {
+        // position: absolute;
+        // top: 20%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: left;
+        z-index: 400;
+
+        @include respond(phone) {
+            display: initial;
+        }
+
+
+    }
+
+    &__item {
+        margin: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #0f7def;
+        text-decoration: none;
+        text-transform: capitalize;
+
+    }
+
+    &__click:checked~&__background {
+        height: 23rem;
+        width: 100%;
+    }
+
+    &__click:checked~&__navul {
+        opacity: 1;
+        width: 100%;
+        position: absolute;
+
+    }
+
+    &__menuicon {
+        font-size: 3.5rem;
+        top: 1rem;
+        cursor: pointer;
+        color: #2f2d2d;
+
+    }
+
+
+}
+
+.dropbtn {
+    font-size: 1.5rem;
+    color: #0f7def;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #1f70e8;
+    padding: 12px 16px;
+    text-decoration: underline;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+//////////////@include
+
+/*Trigger Button*/
+//   .login-trigger {
+//     font-weight: bold;
+//     color: #fff;
+//     background: linear-gradient(to bottom right, #B05574, #F87E7B);
+//     padding: 15px 30px;
+//     border-radius: 30px;
+//     position: relative; 
+//     top: 50%;
+//   }
+
+/*Modal*/
+
+/* Overlay Styles */
+.overlay {
+
+    background: #272626;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    transition: all .23s linear;
+
+
+
+    &__modalzo {
+        @include abstract;
+
+        display: block;
+        // background: black;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        // height: 72rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(15, 15, 15, 0.2), 0 6px 20px 0 rgba(17, 17, 17, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.7s;
+        animation-name: animatetop;
+        animation-duration: 0.7s;
+        z-index: 99999;
+    }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+   
+        opacity: 1
+    }
+}
+
+.tilemenu {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.closeo {
+    color: #080808;
+    transform: scale(1.2);
+    float: right;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    font-size: 3rem;
+}
+
+
+.modal-mycontent {
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #ffffff, rgb(255, 255, 255));
+    z-index: 99999;
+}
+
+.form-control {
+    margin: 1em 0;
+}
+
+.form-control:hover,
+.form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.usernameo,
+.passwordo {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;
+    display: block;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
+}
+
+.loginx {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #FAB87F;
+    color: #FAB87F;
+    font-weight: bold;
+    transition: all .5s;
+    margin-top: 1em;
+}
+
+.loginx:hover {
+    background: #FAB87F;
+    color: #fff;
+}

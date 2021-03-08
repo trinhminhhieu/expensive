@@ -1,0 +1,245 @@
+.playlist-site {
+    padding: 9rem 0;
+    // background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+// ///table
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.w100 {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 3px;
+    // overflow: hidden;
+    // position: relative;
+
+     
+}
+
+
+.w100 th {
+    width: 150px;
+    padding: 2rem;
+    background-color: $btn_color;
+    border-collapse: collapse;
+
+    // border: 1px solid black;
+}
+
+.thead {
+    color: $white_color;
+}
+
+.w100 tr ,td {
+    font-size: 1.5rem;
+    color: orangered;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+tbody tr:nth-child(even) {
+  background-color: #e6e0e0;
+}
+
+// .column1 {
+//     width: 200px;
+//     padding-left: 40px;
+//   }
+  
+//   .column2 {
+//     width: 170px;
+//   }
+  
+//   .column3 {
+//     width: 355px;
+//     padding-left: 17px;
+//   }
+  
+//   .column4 {
+//     width: 110px;
+//     text-align: right;
+//   }
+  
+
+// table * {
+//     position: relative;
+// }
+
+// @include respond(phone) {
+// .column1, .column2, .column3, .column4 {
+//         width: 100%;
+//     }  
+// }
+
+// @include respond(phone) {
+//   table {
+//          border-collapse: collapse;
+//         }  
+//     }
+// @include respond(phone) {
+//     #w100 tr, td{
+//             border: none;
+//         }  
+//     }
+
+// @include respond(phone) {
+//         #w100 th{
+//                 padding-top: 2rem;
+//             }  
+//         }
+
+// @include respond(phone) {
+//       table {
+//         display: block;
+//       }
+      
+//       table thead {
+//         display: none;
+//       }
+      
+//       table tbody tr td:last-child {
+//         margin-bottom: 0;
+//       }
+//       table tbody tr td:before {
+
+//         color: $heading_color2;
+//         line-height: 1.2;
+//         font-weight: 400;
+//         position: absolute;
+//         width: 40%;
+//         left: 10px;
+//         top: 10px;
+//       }
+//       .column4{
+//         text-align: left;
+//       }
+    
+//       .column4,
+//       .column1,
+//       .column2,
+//       .column3 {
+//         width: 100%;
+//       }
+//       table > *, table tr, table td, table th {
+//         display: block;
+//       }
+//       tbody tr {
+//         font-size: 1.5rem;
+//       }
+//       table tbody tr {
+//         height: auto;
+//         padding: 2rem 0;
+//       }
+//       table tbody tr td {
+//         padding-left: 40% !important;
+//         margin-bottom: 24px;
+//       }
+//       table tbody tr td:nth-child(1):before {
+//         content: "Travel Sites";
+//       }
+//       table tbody tr td:nth-child(2):before {
+        
+//         content: " "; 
+//       }
+//       table tbody tr td:nth-child(3):before {
+//         content: "Type";
+//       }
+//       table tbody tr td:nth-child(4):before {
+        
+//         content: "Company ";
+//       }
+
+    
+      
+//     }
+    
+
+
+// // @include respond(phone) {
+// // table thead {
+// //     display: none;
+// //   }
+// // }
+
+.linksite {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Chivo', sans-serif;
+
+    &:link,
+    &:visited {
+            color: $btn_color;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-secondary-light;
+        }
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $text-white, $text-light-primary);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+.text-box {
+    text-align: center;
+}
+
+
+
+// ///ads by goooogle
+.box-ads {
+
+   height: 9rem;
+   padding: 5rem;
+   position: relative;
+}
+
+.adsgoogle {
+  
+    width: 100%;
+    text-align: center;
+    
+}
+
+.adsbanner {
+    max-width: 100%;
+    height: auto;
+
+    @include respond(phone) {
+        height: 5rem;
+    }
+}

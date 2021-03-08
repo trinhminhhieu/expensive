@@ -1,0 +1,46 @@
+extends base
+//- include _reviewCard
+
+block append head
+  link(rel='stylesheet', href='/js/pgwslideshow.min.css')
+
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet')
+
+
+block content
+
+        section.sectionpost
+            .row
+                .col-1-of-2
+                    .slides
+                        ul.pgwSlideshow
+                            li
+                                img(src=`/img/tours/${usa.imageCover}`, alt=`${usa.startLocation.description}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription1}`, alt=`${usa.startLocation.description}`, data-description=`${usa.startLocation.datadescription1}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription2}`, alt=`${usa.startLocation.description}`, data-description=`${usa.startLocation.datadescription2}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription3}`, alt=`${usa.startLocation.description}`, data-description=`${usa.startLocation.datadescription3}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription4}`,alt=`${usa.startLocation.description}`, data-description=`${usa.startLocation.datadescription4}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription5}`, alt='',data-description=`${usa.startLocation.datadescription5}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription6}`, alt='', data-description=`${usa.startLocation.datadescription6}`)
+                            li
+                                img(src=`/img/usa/${usa.startLocation.imgdescription7}`, alt='',  data-description=`${usa.startLocation.datadescription7}`)
+
+
+                .col-1-of-2
+                    .boxtext
+                        h1.titleplace= usa.startLocation.description
+                        p.textpost= usa.description
+                           
+        section.section-map
+            #map(data-locations=`${JSON.stringify(usa.locations)}`)
+
+        script(src='/js/jquery.min.js')
+        script(src='/js/pgwslideshow.min.js')
+        script(src='/js/mainjquerygallery.js')

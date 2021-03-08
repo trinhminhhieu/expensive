@@ -1,0 +1,46 @@
+header.header
+  .header__rowmenu
+    .header__navbar
+      .header__logo
+        a(href='/')
+          img.header__logo-1(src='/img/trip.png')
+    .header__navbar
+      ul.header__ula
+        li.header__nav-item
+          a.header__nav-link(href='/sites') Travel sites
+        li.header__nav-item
+          a.header__nav-link(href='/place') Best Place
+        li.header__nav-item
+          a.header__nav-link(href='/flight') Cheap Airlines
+        li.header__nav-item
+          a.header__nav-link(href='/flight') Blog
+    .header__navbar-2
+      ul.header__ula
+        li.header__nav-item
+          a.header__nav-login(href='/login') Login
+        li.header__nav-item.register-button
+          a.header__nav-register(href='/signup') Register
+
+.navigator
+  input#toggle.navigator__click(type='checkbox')
+  label.navigator__button(for='toggle')
+    span.navigator__menuicon.ti-menu
+  .navigator__background
+  nav.navigator__navul
+    ul.navigator__listitem
+      li.navigator__item
+        a.navigator__link(href='/sites') Travel sites
+      li.navigator__item
+        a.navigator__link(href='/flight') Flights
+      li.navigator__item
+        a.navigator__link(href='/place') Best place
+      li.navigator__item
+        a.navigator__link(href='/blog') Blog
+      li.navigator__item
+        p.dropbtn(onclick='myFunction()') Account
+      #myDropdown.dropdown-content
+        a.login-trigger.datapopup( href='/login') Login
+        a.login-trigger.datapopup( href='signup') Signup
+
+
+script(type='text/javascript', src='/js/dropmenuphone.js')
